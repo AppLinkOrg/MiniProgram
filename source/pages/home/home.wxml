@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<swiper autoplay='true' indicator-dots='true' >
+  <swiper-item wx:for="{{indexbanner}}" wx:key="k">
+    <navigator url='{{item.path}}'>
+      <image src='{{uploadpath}}indexbanner/{{item.img}}' style='width:100vw;height:300rpx;' mode="aspectFill"></image>
+    </navigator>
+  </swiper-item>
+</swiper>
+

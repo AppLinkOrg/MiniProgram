@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/newslist/newslist",
+    "pages/servicelist/servicelist",
+    "pages/member/member",
+    "pages/content/content",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#BF8436",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#BF8436",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "关于我们",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icons/home-o.png",
+        "selectedIconPath": "images/icons/home.png"
+      },
+      {
+        "text": "动态",
+        "pagePath": "pages/newslist/newslist",
+        "iconPath": "images/icons/list-o.png",
+        "selectedIconPath": "images/icons/list.png"
+      },
+      {
+        "text": "服务",
+        "pagePath": "pages/servicelist/servicelist",
+        "iconPath": "images/icons/service-o.png",
+        "selectedIconPath": "images/icons/service.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/member/member",
+        "iconPath": "images/icons/user-o.png",
+        "selectedIconPath": "images/icons/user.png"
+      }
+    ]
+  }
+}
