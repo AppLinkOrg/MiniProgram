@@ -1,1 +1,5 @@
 /* pages/home/home.wxss */
+.maintab_icon{
+  width: 60rpx;
+  height: 60rpx;
+}

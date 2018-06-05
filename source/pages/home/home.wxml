@@ -1,9 +1,94 @@
 <!--pages/home/home.wxml-->
-<swiper autoplay='true' indicator-dots='true' >
+<swiper autoplay='true' indicator-dots='true'>
   <swiper-item wx:for="{{indexbanner}}" wx:key="k">
-    <navigator url='{{item.path}}'>
+    <navigator url='{{item.objs_path}}'>
       <image src='{{uploadpath}}indexbanner/{{item.img}}' style='width:100vw;height:300rpx;' mode="aspectFill"></image>
     </navigator>
   </swiper-item>
 </swiper>
 
+
+<view class='flex-row padding-20'>
+  <view class='flex-1 text-center' bindtap='viewPhoto' id="{{uploadpath}}inst/{{permit}}" wx:if="{{permit!=''}}">
+    <view>
+      <image class='maintab_icon' src='{{uploadpath}}resource/permit.png'></image>
+    </view>
+    <view class='h6 '>
+      营业执照
+    </view>
+  </view>
+  <view class='flex-1 text-center' bindtap='phoneCall' id="{{tel}}"  wx:if="{{tel!=''}}">
+    <view>
+      <image class='maintab_icon' src='{{uploadpath}}resource/phone.png'></image>
+    </view>
+    <view class='h6 '>
+      热线
+    </view>
+  </view>
+  <view class='flex-1 text-center' bindtap='openMap' id="{{address}}"  wx:if="{{address!=''}}">
+    <view>
+      <image class='maintab_icon' src='{{uploadpath}}resource/map.png'></image>
+    </view>
+    <view class='h6 '>
+      地址
+    </view>
+  </view>
+  <view class='flex-1 text-center'>
+    <view>
+      <image class='maintab_icon' src='{{uploadpath}}resource/kefu.png'></image>
+      <contact-button size="30" style='margin-left:-60rpx;' class='clear-contact'></contact-button>
+    </view>
+    <view class='h6 '>
+      客服
+    </view>
+  </view>
+</view>
+
+<navigator url='/pages/aboutus/aboutus?id={{item.id}}' wx:for="{{aboutuslist}}" wx:key="key">
+  <view class='subbar flex-row'>
+    <view class='firsttab'></view>
+    <view class='secondtab'>{{item.name}}</view>
+    <view class='thirdtab flex-1 text-right'></view>
+  </view>
+  <view class='white-block padding-20 h5 '>
+    {{item.summary}}
+  </view>
+</navigator>
+
+<block wx:if="{{newslist.length>0}}">
+  <view class='subbar flex-row'>
+    <view class='firsttab'></view>
+    <view class='secondtab'>热门动态</view>
+    <navigator url='/pages/newslist/newslist' open-type='switchTab' class='thirdtab flex-1 text-right'>更多</navigator>
+  </view>
+  <view class='white-block'>
+    <navigator url='/pages/news/news?id={{item.id}}' wx:for="{{newslist}}" wx:key="k" class='flex-row rowitem'>
+      <view>
+        <image src='{{uploadpath}}news/{{item.cover}}' class='imgcover' mode='aspectFill'></image>
+      </view>
+      <view class='flex-1'>
+        <view class='headtitle'>{{item.name}}</view>
+        <view class='headdescription'>
+          {{item.summary}}
+        </view>
+        <view  class='headdescription text-right'>{{item.published_date_formatting}}</view>
+      </view>
+    </navigator>
+  </view>
+</block>
+
+
+<navigator url='/pages/service/service?id={{item.id}}' wx:for="{{servicelist}}" wx:key="key">
+  <view class='subbar flex-row'>
+    <view class='firsttab'></view>
+    <view class='secondtab'>{{item.name}}</view>
+    <view class='thirdtab flex-1 text-right'></view>
+  </view>
+  <view class='white-block padding-20 h5 '>
+    {{item.summary}}
+  </view>
+</navigator>
+
+<view wx:if="{{instinfo.level!=3}}" class='inbottomla txt-gray h6'>
+  云易创提供技术支持
+</view>

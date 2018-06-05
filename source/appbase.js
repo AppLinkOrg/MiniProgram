@@ -11,7 +11,7 @@ export class AppBase {
 
   static UserInfo = {};
   unicode = "yunyichuang";
-  pagetitle="";
+  pagetitle=null;
   app = null;
   options = null;
   data = {
@@ -127,10 +127,12 @@ export class AppBase {
   onShow() {
     var that = this;
     var instapi=new InstApi();
-
-    wx.setNavigationBarTitle({
-      title: this.Base.pagetitle
-    })
+    
+    if (this.Base.pagetitle != null) {
+      if (wx.setNavigationBarTitle({
+        title: this.Base.pagetitle
+      }));
+    } 
 
     instapi.info({},(instinfo)=>{
       if(instinfo==null||instinfo==false){
@@ -140,7 +142,7 @@ export class AppBase {
         return;
       }
       this.Base.setMyData({instinfo:instinfo});
-      if(this.Base.pagetitle==""){
+      if(this.Base.pagetitle==null){
         if (wx.setNavigationBarTitle({
           title: instinfo.name
         }));

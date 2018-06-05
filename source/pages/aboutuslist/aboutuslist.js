@@ -14,21 +14,9 @@ class Content extends AppBase {
   }
   onMyShow() {
     var that = this;
-    var instapi=new InstApi();
-    instapi.indexbanner({},(indexbanner)=>{
-      that.Base.setMyData({ indexbanner: indexbanner});
-    });
-    instapi.info({}, (info) => {
-      that.Base.setMyData(info);
-    });
-    instapi.aboutuslist({ inhome: "Y" }, (aboutuslist) => {
+    var instapi = new InstApi();
+    instapi.aboutuslist({  }, (aboutuslist) => {
       that.Base.setMyData({ aboutuslist: aboutuslist });
-    });
-    instapi.newslist({ inhome: "Y" }, (newslist) => {
-      that.Base.setMyData({ newslist: newslist });
-    });
-    instapi.servicelist({ inhome: "Y" }, (servicelist) => {
-      that.Base.setMyData({ servicelist: servicelist });
     });
   }
 

@@ -1,8 +1,12 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/index/index",
+    "pages/news/news",
+    "pages/service/service",
     "pages/newslist/newslist",
+    "pages/aboutuslist/aboutuslist",
+    "pages/aboutus/aboutus",
+    "pages/index/index",
     "pages/servicelist/servicelist",
     "pages/member/member",
     "pages/content/content",
@@ -21,10 +25,16 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "text": "关于我们",
+        "text": "首页",
         "pagePath": "pages/home/home",
         "iconPath": "images/icons/home-o.png",
         "selectedIconPath": "images/icons/home.png"
+      },
+      {
+        "text": "关于我们",
+        "pagePath": "pages/aboutuslist/aboutuslist",
+        "iconPath": "images/icons/hotel-o.png",
+        "selectedIconPath": "images/icons/hotel.png"
       },
       {
         "text": "动态",
@@ -37,12 +47,6 @@
         "pagePath": "pages/servicelist/servicelist",
         "iconPath": "images/icons/service-o.png",
         "selectedIconPath": "images/icons/service.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/member/member",
-        "iconPath": "images/icons/user-o.png",
-        "selectedIconPath": "images/icons/user.png"
       }
     ]
   }
