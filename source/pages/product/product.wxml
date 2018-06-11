@@ -5,14 +5,14 @@
 </view>
 <view class='white-block flex-row  flex-center padding-20'>
   <view class='flex-1 '>
-    <view class='name h3'>
+    <view class='name h5'>
       {{name}}
     </view>
-    <view class='summary txt-gray'>
+    <view class='summary txt-gray h6'>
       {{summary}}
     </view>
   </view>
-  <view class='txt-primary h3'>
+  <view class='txt-primary h4'>
     {{price_txt}}
   </view>
 </view>
