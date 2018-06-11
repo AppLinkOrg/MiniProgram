@@ -6,7 +6,7 @@
     </view>
   </view>
   <view class='flex-1'>
-  <scroll-view class='productlist white-block'>
+  <scroll-view class='productlist white-block' scroll-y>
     <navigator url='/pages/product/product?id={{item.id}}' wx:for="{{productlist}}" wx:key="k" class='flex-row product'>
       <view>
         <image src='{{uploadpath}}product/{{item.cover}}' class='cover'></image>
