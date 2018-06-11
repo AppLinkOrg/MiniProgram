@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/product/product",
+    "pages/productlist/productlist",
     "pages/news/news",
     "pages/service/service",
     "pages/newslist/newslist",
@@ -35,6 +37,12 @@
         "pagePath": "pages/aboutuslist/aboutuslist",
         "iconPath": "images/icons/hotel-o.png",
         "selectedIconPath": "images/icons/hotel.png"
+      },
+      {
+        "text": "产品",
+        "pagePath": "pages/productlist/productlist",
+        "iconPath": "images/icons/store-o.png",
+        "selectedIconPath": "images/icons/store.png"
       },
       {
         "text": "动态",

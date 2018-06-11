@@ -1,10 +1,14 @@
 /**app.wxss**/
 page{
-  background: #fcfcfc;
+  background: #f2f2f2;
 }
 .clear-contact{
   position: absolute;  
   opacity: 0;
+}
+.clear-contact-debug{ 
+  opacity: 1;
+  background: orange;
 }
 view,navigator{
   color:#333;
@@ -15,6 +19,10 @@ view,navigator{
 }
 .flex-wrap{
   flex-wrap: wrap;
+}
+.flex-center{
+  align-content: center;
+  align-items: center;
 }
 .flex-1{
   flex:1;
@@ -41,7 +49,11 @@ view,navigator{
 .txt-gray{
   color:#ddd;
 }
-
+.nowrap{
+  word-break:keep-all;           /* 不换行 */
+white-space:nowrap;          /* 不换行 */
+overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+}
 .h1{
   font-size: 64rpx;
 }
@@ -89,6 +101,9 @@ button[disabled][type=primary] {
 }
 .margin-20{
   margin:20rpx;
+}
+.margin-top{
+  margin-top:40rpx;
 }
 .bigheader{
   padding:30rpx;

@@ -30,6 +30,9 @@ class Content extends AppBase {
     instapi.servicelist({ inhome: "Y" }, (servicelist) => {
       that.Base.setMyData({ servicelist: servicelist });
     });
+    instapi.productlist({ inhome: "Y" }, (productlist) => {
+      that.Base.setMyData({ productlist: productlist });
+    });
   }
 
 }
