@@ -10,7 +10,8 @@ import { MemberApi } from "apis/member.api";
 export class AppBase {
 
   static UserInfo = {};
-  unicode = "yunyichuang";
+  unicode = "yycgkk";
+  needauth = false;
   pagetitle=null;
   app = null;
   options = null;
@@ -184,7 +185,13 @@ export class AppBase {
             fail: res => {
               console.log(res);
               //that.Base.gotoOpenUserInfoSetting();
-              that.onMyShow();
+              if (this.Base.needauth==true){
+                wx.redirectTo({
+                  url: '/pages/auth/auth',
+                })
+              }else{
+                that.onMyShow();
+              }
               //that.Base.getAddress();
             }
           });
@@ -203,6 +210,7 @@ export class AppBase {
     }
 
   }
+
   onMyShow(){
     console.log("onMyShow");
   }
@@ -644,5 +652,18 @@ export class AppBase {
   console(key,val){
     var json={key,val};
     console.log(json);
+  }
+
+  checkRealname(callback) {
+    var memberapi = new MemberApi();
+    memberapi.checkrealname({}, (ret) => {
+      if (ret == false) {
+        wx.navigateTo({
+          url: '/pages/signup/signup',
+        })
+      } else {
+        callback();
+      }
+    });
   }
 } 
