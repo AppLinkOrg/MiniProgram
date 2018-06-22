@@ -10,7 +10,7 @@ import { MemberApi } from "apis/member.api";
 export class AppBase {
 
   static UserInfo = {};
-  unicode = "yycgkk";
+  unicode = "yunyichuang";
   needauth = false;
   pagetitle=null;
   app = null;

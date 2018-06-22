@@ -11,8 +11,8 @@ page{
   background: orange;
 }
 view,navigator{
-  color:#333;
   font-size: 32rpx;
+  font-weight: lighter;
 }
 .flex-row{
   display: flex;
@@ -41,7 +41,7 @@ view,navigator{
   color:white;
 }
 .bg-primary{
-  background: #BF8436;
+  
 }
 
 .txt-primary{
@@ -127,6 +127,9 @@ button[disabled][type=primary] {
 }
 .border-top{
   border-top: 2rpx rgba(221, 221, 221, 0.5) solid;
+}
+.txt-border{
+  font-weight: bold;
 }
 
 .subbar{

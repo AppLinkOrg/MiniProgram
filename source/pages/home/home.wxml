@@ -8,7 +8,7 @@
       <image class='logo' src='{{uploadpath}}inst/{{logo}}'></image>
     </view>
   </view>
-  <view class='text-center txt-primary padding-20 h4'>
+  <view class='text-center txt-primary padding-20 h4 txt-border'>
     {{name}}
   </view>
   <view class='text-center txt-white h6'>
