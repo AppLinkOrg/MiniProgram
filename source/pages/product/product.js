@@ -11,6 +11,7 @@ class Content extends AppBase {
   onLoad(options) {
     this.Base.Page = this;
     //options.id=1;
+    this.Base.pagetitle = "";
     super.onLoad(options);
   }
   onMyShow() {
@@ -18,7 +19,10 @@ class Content extends AppBase {
     var instapi = new InstApi();
     instapi.product({id:this.Base.options.id}, (product) => {
       that.Base.setMyData(product);
-
+      that.Base.pagetitle = product.name;
+      wx.setNavigationBarTitle({
+        title: product.name,
+      })
       product.content = that.Base.util.HtmlDecode(product.content);
       WxParse.wxParse('content', 'html', product.content, that, 10);
 

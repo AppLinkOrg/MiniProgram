@@ -33,7 +33,7 @@
 
 <view class='block-100'></view>
 <view class='fixedbottom'>
-  <button type='primary' open-type='contact'>
+  <button type='primary' open-type='contact' session-from="产品咨询" send-message-title="{{name}}" >
     联系客服
   </button>
 </view>

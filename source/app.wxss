@@ -10,9 +10,22 @@ page{
   opacity: 1;
   background: orange;
 }
+.clear-button{ 
+  padding: 0rpx;
+  font-size: unset;
+  text-align: unset;
+  line-height: unset;
+  background-color: transparent;
+  border: 0rpx red solid;
+  border-color:red;
+}
+.clear-button::after {
+  border: 0;
+} 
 view,navigator{
   font-size: 32rpx;
-  font-weight: lighter;
+  font-weight: 350;
+  color: #2c2c2c;
 }
 .flex-row{
   display: flex;
@@ -23,6 +36,10 @@ view,navigator{
 .flex-center{
   align-content: center;
   align-items: center;
+}
+.flex-bottom{
+  align-content: baseline;
+  align-items: baseline;
 }
 .flex-1{
   flex:1;
@@ -41,7 +58,7 @@ view,navigator{
   color:white;
 }
 .bg-primary{
-  
+  background: #BF8436;
 }
 
 .txt-primary{
@@ -51,7 +68,14 @@ view,navigator{
   color:white;
 }
 .txt-gray{
-  color:#ddd;
+  color:#cdcdcd;
+}
+.txt-light{
+  color: #fcfcfc;
+  font-weight: 350;
+}
+.txt-bold{
+  font-weight: bolder;
 }
 .nowrap{
   word-break:keep-all;           /* 不换行 */
@@ -103,16 +127,58 @@ button[disabled][type=primary] {
 .padding-20{
   padding:20rpx;
 }
+.padding-40{
+  padding:40rpx;
+}
 .margin-20{
   margin:20rpx;
 }
 .margin-top{
   margin-top:40rpx;
 }
+.margin-top-10{
+  margin-top:20rpx;
+}
+.margin-top-5{
+  margin-top:10rpx;
+}
+
+.icon-10{
+  width: 20rpx;
+  height: 20rpx;
+}
+.icon-15{
+  width: 30rpx;
+  height: 30rpx;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.icon-25{
+  width: 50rpx;
+  height: 50rpx;
+}
+.icon-30{
+  width: 60rpx;
+  height: 60rpx;
+}
+.icon-40{
+  width: 80rpx;
+  height: 80rpx;
+}
+.line-height-0{
+  line-height: 0rpx;
+}
+
+
 .bigheader{
   padding:30rpx;
   padding-top: 10rpx;
 }
+
+
+
 .fixedbottom{
   position: fixed;
   bottom: 0rpx;
@@ -127,9 +193,6 @@ button[disabled][type=primary] {
 }
 .border-top{
   border-top: 2rpx rgba(221, 221, 221, 0.5) solid;
-}
-.txt-border{
-  font-weight: bold;
 }
 
 .subbar{
@@ -200,6 +263,11 @@ button[disabled][type=primary] {
   width: 100rpx;
   margin-right: 10rpx;
   color:#999;
+}
+
+.findno{
+  width: 257rpx;
+  height: 257rpx;
 }
 
 .rowitem .play{
@@ -318,12 +386,13 @@ display:-webkit-box;
 }
 .tab{
   text-align: center;
-  font-size: 32rpx;
+  font-size: 26rpx;
 }
 .tab .tabtext{
   padding-top:18rpx;
   padding-bottom:18rpx;
   color: #999;
+  font-size: 26rpx;
 }
 .tab .active{
   border-bottom: 6rpx solid #BF8436;
@@ -331,7 +400,7 @@ display:-webkit-box;
 }
 
 .maintab{
-  height: calc( 100vh - 88rpx );
+  height: calc( 100vh - 82rpx );
 }
 .maintab-item{
   height: 100%;

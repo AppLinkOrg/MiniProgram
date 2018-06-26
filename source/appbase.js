@@ -229,7 +229,9 @@ export class AppBase {
     console.log("onReachBottom");
   }
   onShareAppMessage() {
-
+    return {
+      title: this.Base.pagetitle
+    };
 
   }
   setMyData(obj) {
